@@ -227,7 +227,7 @@ def handle_bgmi(message):
             if user_id in bgmi_cooldown:
                 time_since_last_attack = (datetime.datetime.now() - bgmi_cooldown[user_id]).seconds
                 if time_since_last_attack < 2:
-                    remaining_time = 3 - time_since_last_attack
+                    remaining_time = 2 - time_since_last_attack
                     response = f"You are on cooldown. Please wait {remaining_time} seconds before running the /attack1 command again."
                     bot.reply_to(message, response)
                 return
